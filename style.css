@@ -1,0 +1,106 @@
+/* Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262 */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #0b1020, #111111, #1b1f3a);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffb6c9;
+    text-shadow: 0 0 10px #ffb6c9;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav ul li {
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+nav ul li:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* LINKS */
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #ffb6c9;
+}
+
+/* BUTTONS */
+button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #ffb6c9, #d8a7b1);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffb6c9;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #ffb6c9;
+    color: white;
+}
+
+/* TAGS */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tags span {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+/* GLASS CARD */
+.glass-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(255,182,201,0.15);
+}

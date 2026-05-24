@@ -1,0 +1,179 @@
+<!--Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body{
+            background: url("pinkflower.gif") center/cover no-repeat fixed;
+        }
+
+        .center-page{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .calculator-container{
+            width: 420px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 35px;
+            box-shadow: 0 0 20px rgba(255,182,201,0.15);
+        }
+
+        .calculator-container h2{
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            color: #ffb6c9;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255,182,201,0.4);
+        }
+
+        label{
+            color: #ffb6c9;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input{
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input::placeholder{
+            color: #d8d8d8;
+        }
+
+        .button-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        button{
+            padding: 15px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(to right, #ffb6c9, #d8a7b1);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px #ffb6c9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+    <h2>✦ ELAINA'S CYBERSPACE</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="PersonalInfo.html">Personal Info</a></li>
+        <li><a href="Tools.html">Useful Tools</a></li>
+    </ul>
+    </nav>
+
+    <div class="center-page">
+
+        <div class="calculator-container">
+
+            <h2>SIMPLE CALCULATOR</h2>
+
+            <label>First Number</label>
+            <input id="num1" type="number" placeholder="Enter first number">
+
+            <label>Second Number</label>
+            <input id="num2" type="number" placeholder="Enter second number">
+
+            <label>Result</label>
+            <input id="result" type="text" readonly>
+
+            <div class="button-grid">
+
+                <button onclick="calculate('add')">Add</button>
+
+                <button onclick="calculate('subtract')">Subtract</button>
+
+                <button onclick="calculate('multiply')">Multiply</button>
+
+                <button onclick="calculate('divide')">Divide</button>
+
+                <button onclick="clearFields()" style="grid-column: span 2;">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function calculate(op){
+
+            const a = parseFloat(document.getElementById('num1').value);
+            const b = parseFloat(document.getElementById('num2').value);
+            const result = document.getElementById('result');
+
+            if(isNaN(a) || isNaN(b)){
+                result.value = 'Please enter both numbers';
+                return;
+            }
+
+            if(op === 'add'){
+                result.value = a + b;
+            }
+
+            if(op === 'subtract'){
+                result.value = a - b;
+            }
+
+            if(op === 'multiply'){
+                result.value = a * b;
+            }
+
+            if(op === 'divide'){
+                result.value = b === 0 ? 'Cannot divide by 0' : a / b;
+            }
+        }
+
+        function clearFields(){
+
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('result').value = '';
+        }
+
+    </script>
+
+</body>
+
+</html>

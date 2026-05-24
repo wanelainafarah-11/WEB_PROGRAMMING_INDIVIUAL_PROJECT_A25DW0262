@@ -1,0 +1,135 @@
+<!-- Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaina's CyberSpace</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+         body{
+            background: url("wall2.jpg") center/cover no-repeat fixed;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        .hero-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;    
+            text-align: center;
+            padding: 60px 50px;
+            width: 90%;
+            max-width: 850px;       
+            z-index: 2;
+        }
+
+        .mini-title {
+            color: #ffb6c9;
+            letter-spacing: 5px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px rgba(255,182,201,0.3);
+        }
+
+        .hero h1 {
+            font-size: 65px;        
+            font-family: 'Orbitron', sans-serif;
+            color: #ffb6c9;
+            text-shadow: 0 0 10px #ffb6c9, 0 0 20px #ff69b4;
+            margin-bottom: 35px;    
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #d8d8d8;
+            max-width: 650px;
+            margin-bottom: 35px;    
+        }
+
+        .hero-profile-pic {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 24px;
+            margin-bottom: 35px;    
+            border: 1px solid rgba(255,182,201,0.2);
+            box-shadow: 0 0 20px rgba(255,182,201,0.15);
+        }
+
+        /* INTERACTION LAYERS */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;    
+        }
+
+        .button-group a {
+            text-decoration: none;  
+        }
+
+        .hero .tags {
+            justify-content: center; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>✦ ELAINA'S CYBERSPACE</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="PersonalInfo.html">Personal Info</a></li>
+            <li><a href="Tools.html">Useful Tools</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO PROFILE HOUSING -->
+    <section class="hero">
+        <div class="glow1"></div>
+        <div class="glow2"></div>
+        
+        <div class="hero-card glass-card">
+
+            <p class="mini-title">✦ PERSONAL WEBSITE / DIGITAL PORTFOLIO ✦</p>
+            <h1>WAN ELAINA FARAH</h1>
+
+            <img src="Homura.jpg" alt="Elaina's icon" class="hero-profile-pic">
+
+            <p class="hero-description">
+                Welcome to my personal website! This is a small digital space showcasing
+                my biography, Curriculum Vitae, and a collection of mini web programming projects
+                I've built along the way.
+            </p>
+
+            <div class="button-group">
+                <a href="PersonalInfo.html"><button>ENTER PROFILE</button></a>
+                <a href="Tools.html"><button class="secondary-btn">VIEW TOOLS</button></a>
+            </div>
+
+            <div class="tags">
+                <span>✦ HTML</span>
+                <span>✦ CSS</span>
+                <span>✦ JAVASCRIPT</span>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

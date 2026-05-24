@@ -1,0 +1,187 @@
+<!-- Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    body{
+        background-image: url("green.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .converter-wrapper{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .converter-card{
+        width: 100%;
+        max-width: 500px;
+        padding: 35px;
+        text-align: center;
+    }
+
+    .tool-box{
+        background: rgba(0,0,0,0.25);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 25px;
+        padding: 30px;
+        margin-top: 10px;
+    }
+
+    .converter-card h2{
+        font-family: 'Orbitron', sans-serif;
+        color: #ffb6c9;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255,182,201,0.3);
+    }
+
+    input{
+        width: 100%;
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.15);
+        background: rgba(0,0,0,0.35);
+        color: white;
+        outline: none;
+        margin-bottom: 22px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    input:focus{
+        border-color: #ffb6c9;
+        box-shadow: 0 0 12px rgba(255,182,201,0.25);
+    }
+
+    .button-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    button{
+        padding: 13px;
+        border: none;
+        border-radius: 18px;
+        background: rgba(255,182,201,0.12);
+        border: 1px solid rgba(255,182,201,0.2);
+        color: #ffb6c9;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 0.95rem;
+    }
+
+    button:hover{
+        background: #ffb6c9;
+        color: black;
+        transform: translateY(-2px);
+        box-shadow: 0 0 15px rgba(255,182,201,0.45);
+    }
+
+    .result{
+        margin-top: 22px;
+        font-size: 1.05rem;
+        color: #e0e0e0;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <h2>✦ ELAINA'S CYBERSPACE</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="PersonalInfo.html">Personal Info</a></li>
+            <li><a href="Tools.html">Useful Tools</a></li>
+        </ul>
+    </nav>
+
+    <div class="converter-wrapper">
+
+        <div class="converter-card glass-card">
+
+            <div class="tool-box">
+
+                <h2>UNIT CONVERTER</h2>
+
+                <input type="number" id="value" placeholder="Enter value">
+
+                <div class="button-grid">
+
+                    <button onclick="convert('cm-m')">CM → M</button>
+                    <button onclick="convert('m-cm')">M → CM</button>
+                    <button onclick="convert('m-km')">M → KM</button>
+                    <button onclick="convert('km-m')">KM → M</button>
+
+                </div>
+
+                <p class="result" id="result"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    function convert(type){
+
+        let v = parseFloat(document.getElementById("value").value);
+
+        if(isNaN(v)){
+            document.getElementById("result").innerText = "Enter a valid number";
+            return;
+        }
+
+        let result = 0;
+        let text = "";
+
+        if(type === "cm-m"){
+            result = v / 100;
+            text = v + " cm = " + result + " m";
+        }
+
+        if(type === "m-cm"){
+            result = v * 100;
+            text = v + " m = " + result + " cm";
+        }
+
+        if(type === "m-km"){
+            result = v / 1000;
+            text = v + " m = " + result + " km";
+        }
+
+        if(type === "km-m"){
+            result = v * 1000;
+            text = v + " km = " + result + " m";
+        }
+
+        document.getElementById("result").innerText = text;
+    }
+
+    </script>
+
+</body>
+</html>

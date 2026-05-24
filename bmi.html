@@ -1,0 +1,153 @@
+<!-- Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    body{
+    background-image: url("redflower.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    .bmi-wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    }
+
+    .bmi-card{
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    text-align: center;
+    }
+
+    .bmi-card h2{
+    font-family: 'Orbitron', sans-serif;
+    color: #ffb6c9;
+    margin-bottom: 20px;
+    }
+
+    label{
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #e0e0e0;
+    }
+
+    input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    outline: none;
+    }
+
+    input:focus{
+    border-color: #ffb6c9;
+    box-shadow: 0 0 10px rgba(255,182,201,0.3);
+    }
+
+    button{
+    margin-top: 20px;
+    width: 100%;
+    }
+
+    .result{
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #d8d8d8;
+    }
+
+    .status{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffb6c9;
+    }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+    <h2>✦ ELAINA'S CYBERSPACE</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="PersonalInfo.html">Personal Info</a></li>
+        <li><a href="Tools.html">Useful Tools</a></li>
+    </ul>
+    </nav>
+    <div class="bmi-wrapper">
+        <div class="bmi-card glass-card">
+            <h2>BMI CHECKER</h2>
+
+            <label>Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+
+            <label>Height (cm)</label>
+            <input type="number" id="height" placeholder="Enter your height">
+
+            <button onclick="calculateBMI()">Calculate</button>
+
+            <div class="result" id="result"></div>
+            <div class="status" id="status"></div>
+
+        </div>
+    </div>
+
+    <script>
+        function calculateBMI(){
+            let w = parseFloat(document.getElementById("weight").value);
+            let h = parseFloat(document.getElementById("height").value);
+
+            /*both must be enter or it wont work*/
+            if(!w || !h){
+                document.getElementById("result").innerText = "Please enter valid values";
+                document.getElementById("status").innerText = "";
+                return;
+            }
+
+            let bmi = w / ((h/100) * (h/100));
+            let status = "";
+
+            if(bmi < 18.5){
+                status = "Underweight";
+            }
+            else if(bmi <25){
+                status = "Healthy weight";
+            }
+            else if(bmi <30){
+                status = "Overweight";
+            }
+            else{
+                status = "Obese";
+            }
+
+            document.getElementById("result").innerText = "Your BMI: " + bmi.toFixed(2);
+            document.getElementById("status").innerText = status;
+        }
+    </script>
+
+</body>
+</html>

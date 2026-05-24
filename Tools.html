@@ -1,0 +1,140 @@
+<!-- Wan Elaina Farah binti Wan Shazril Hafiz  A25DW0262-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Useful Tools</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    background: url("wallpaper.jpg") center/cover no-repeat fixed;
+}
+
+.tools-container{
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.tools-wrapper{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(255,182,201,0.15);
+}
+
+.tools-container h1{
+    font-family: 'Orbitron', sans-serif;
+    color: #ffb6c9;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255,182,201,0.4);
+}
+
+.tool-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.tool-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.tool-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,182,201,0.4);
+    border-color: #ffb6c9;
+}
+
+.tool-card span{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tool-card h3{
+    font-family: 'Orbitron', sans-serif;
+    color: #ffb6c9;
+    margin-bottom: 8px;      
+}
+
+.tool-card p{
+    font-size: 0.9rem;
+    color: #d8d8d8;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>✦ ELAINA'S CYBERSPACE</h2>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="PersonalInfo.html">Personal Info</a></li>
+        <li><a href="Tools.html">Useful Tools</a></li>
+    </ul>
+</nav>
+
+<div class="tools-container">
+
+    <div class="tools-wrapper">
+
+        <h1>USEFUL TOOLS</h1>
+
+        <div class="tool-grid">
+
+            <a href="calculator.html" class="tool-card">
+                <span>🧮</span>
+                <h3>Calculator</h3>
+                <p>Add, Subtract, Multiply, Divide</p>
+            </a>
+
+            <a href="bmi.html" class="tool-card">
+                <span>⚖️</span>
+                <h3>BMI Checker</h3>
+                <p>Check Body Mass Index of a person</p>
+            </a>
+
+            <a href="tax.html" class="tool-card">
+                <span>💰</span>
+                <h3>Income Tax</h3>
+                <p>Calculate income tax easily</p>
+            </a>
+
+            <a href="converter.html" class="tool-card">
+                <span>📏</span>
+                <h3>Unit Converter</h3>
+                <p>cm ↔ m ↔ km</p>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
